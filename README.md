@@ -42,4 +42,74 @@ void loop() {
 
 }
  ```
+ ## Output
  
+ 
+ 
+# Experiment-2 Traffic Light
+
+## Components Required
+
+* Arduino board *1
+* USB type A to B cable *1
+* Red Led*1
+* Yellow  LED*1
+* Green LED*1
+* 220ohm resistor *3
+* Breadboard*1
+* Breadboard jumper wires* several
+
+## Circuit Diagram
+
+## Code
+
+```
+int Green=5;//defining ledpin as pin 5
+int Yellow=8;//defining ledpin as pin 8
+int Red=6;//defining ledpin as pin 6
+void setup() {
+   pinMode(5,OUTPUT); //define pin5 as output type: 
+   pinMode(8,OUTPUT); //define pin8 as output type:
+   pinMode(6,OUTPUT); //define pin6 as output type:
+}
+
+void loop() 
+{
+  digitalWrite(Green,HIGH);//setting Green to On position
+  delay(5000); //delay of 5 second
+  digitalWrite(Green,LOW);//set led to off position
+  delay(1000); //wait for a second
+  for(int i=1;i<=3;i++)
+     {
+      digitalWrite(Yellow,HIGH);//setting Green to On position
+      delay(500); //delay of 0.5 second
+      digitalWrite(Yellow,LOW);//set led to off position
+      delay(500); //wait for 0.5 second
+     }    // Blinks Yellow 3 times
+      digitalWrite(Red,HIGH);//setting Green to On position
+      delay(500); //delay of 5 second
+      digitalWrite(Red,LOW);//set led to off position
+      delay(500); //wait for 0.5 second
+     
+}
+```
+## Output
+
+
+# Experiment-3 LED Chasing Effect
+ In this experiment, we compile a program to simulate LED chasing effect.
+ 
+## Components Required
+* Arduino Uno *1nos
+* Bread Board *1nos
+* Usb Type A to Type B *1nos
+* Jumper Cable *13nos
+* Led *6nos
+* 220ohm resistor*6nos
+
+##Circuit Diagram
+
+## Code
+```
+
+
