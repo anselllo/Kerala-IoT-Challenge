@@ -21,3 +21,25 @@ Iintoduction to Arduino IDE and Its programming is intended here
 * LED *1
 * 220 Ohm resistor *1
 * Usb A to B cable *1
+ 
+ ## Circuit Diagram
+ 
+ ## Code
+ ```
+ 
+ int ledPin=5;  //defining ledpin as pin 5
+void setup() {
+   pinMode(5,OUTPUT); //define pin5 as output type: 
+}
+
+void loop() {
+  digitalWrite(ledPin,HIGH);//setting pin to on position
+  delay(1000); //delay of 1 second
+  digitalWrite(ledPin,LOW);//set led to off position
+  delay(1000); //wait for a second
+  
+  
+
+}
+ ```
+ 
