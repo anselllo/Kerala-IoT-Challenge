@@ -135,6 +135,6 @@ void loop()
 }
 ```
 ## OUTPUT
-[](
+[](https://github.com/anselllo/Kerala-IoT-Challenge/issues/1#issue-1088610232)
 
 
