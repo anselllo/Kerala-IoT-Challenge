@@ -23,7 +23,7 @@ Iintoduction to Arduino IDE and Its programming is intended here
 * Usb A to B cable *1
  
  ## Circuit Diagram
- ![exp 1 image](https://github.com/anselllo/Kerala-IoT-Challenge/issues/2#issue-1088613055)
+ ![](https://user-images.githubusercontent.com/95708160/147387609-b5e0f3f3-b38d-4238-9df4-a200e6406678.jpeg)
  
  ## Code
  ```
