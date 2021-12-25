@@ -146,6 +146,24 @@ void loop()
 ##  OUTPUT
 The Leds will all lights up with a delay of 0.2 seconds and then turns of one by one with a delay of 0.2 second
  ![](https://user-images.githubusercontent.com/95708160/147388536-50e1d46d-23a3-4101-9b8d-a555aab5759c.gif)
+ 
+ 
+ # Experiment 4 BUTTON CONTROLLED LED
+ 
+ Taking feedback from a button to control any output pin
+ ## Components Required 
+ * Arduino Uno*1
+ * Usbtype A to type B cable*1
+ * Button switch*1
+ * Red M5 LED*1
+ * 220ΩResistor*1
+ * 10KΩ Resistor*1
+ * Breadboard*1
+ * Breadboard Jumper Wire*6
+ 
+ ## Circuit Diagram
+ 
+
 
 
 
