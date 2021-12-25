@@ -44,7 +44,8 @@ void loop() {
 }
  ```
 ## Output
- ![](https://user-images.githubusercontent.com/95708160/147388056-b213c53f-3386-4abd-98fc-b1917400da6a.mp4)
+The LED blinks with a delay of one second 
+ ![](https://user-images.githubusercontent.com/95708160/147388479-4a22307c-f547-4966-bcf2-cfc4f9be810f.gif)
  
  
  
@@ -62,6 +63,7 @@ void loop() {
 * Breadboard jumper wires* several
 
 ## Circuit Diagram
+![](https://user-images.githubusercontent.com/95708160/147388021-c1dcd075-6980-4278-acdc-6e65f96adda9.jpeg)
 
 ## Code
 
@@ -83,12 +85,12 @@ void loop()
   delay(1000); //wait for a second
   for(int i=1;i<=3;i++)
      {
-      digitalWrite(Yellow,HIGH);//setting Green to On position
+      digitalWrite(Yellow,HIGH);//setting Yellow to On position
       delay(500); //delay of 0.5 second
       digitalWrite(Yellow,LOW);//set led to off position
       delay(500); //wait for 0.5 second
      }    // Blinks Yellow 3 times
-      digitalWrite(Red,HIGH);//setting Green to On position
+      digitalWrite(Red,HIGH);//setting RED to On position
       delay(500); //delay of 5 second
       digitalWrite(Red,LOW);//set led to off position
       delay(500); //wait for 0.5 second
@@ -96,6 +98,10 @@ void loop()
 }
 ```
 ## Output
+The green Led lights for five seconds followed by yellow LED blinking three times with a delay of 0.5seconds followed by the red LED ON for 5 seconds 
+![PLAY VEDIO](https://github.com/anselllo/Kerala-IoT-Challenge/issues/6#issue-1088616128)
+## Observed Limitation  
+When all the six Leds turn on at a time the brightness of LEDs reduce owing to the higher power demand than the output.
 
 
 # Experiment-3 LED Chasing Effect
@@ -110,6 +116,7 @@ void loop()
 * 220ohm resistor*6nos
 
 ## Circuit Diagram
+![](https://user-images.githubusercontent.com/95708160/147388050-c91db1bd-febc-4b23-bbd1-5cbe55789a78.jpeg)
 
 ## Code
 ```
@@ -136,7 +143,9 @@ void loop()
    }  
 }
 ```
-## OUTPUT
-[vedio](https://github.com/anselllo/Kerala-IoT-Challenge/issues/1#issue-1088610232)
+##  OUTPUT
+The Leds will all lights up with a delay of 0.2 seconds and then turns of one by one with a delay of 0.2 second
+ ![](https://user-images.githubusercontent.com/95708160/147388536-50e1d46d-23a3-4101-9b8d-a555aab5759c.gif)
+
 
 
