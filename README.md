@@ -44,7 +44,7 @@ void loop() {
 }
  ```
 ## Output
- ![](https://github.com/anselllo/Kerala-IoT-Challenge/issues/5#issue-1088616028)
+ ![](https://user-images.githubusercontent.com/95708160/147388056-b213c53f-3386-4abd-98fc-b1917400da6a.mp4)
  
  
  
