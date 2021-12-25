@@ -25,7 +25,7 @@ Iintoduction to Arduino IDE and Its programming is intended here
 ## Circuit Diagram
  ![](https://user-images.githubusercontent.com/95708160/147387609-b5e0f3f3-b38d-4238-9df4-a200e6406678.jpeg)
  
-## Code
+##  Code
  ```
  
  int ledPin=5;  //defining ledpin as pin 5
@@ -44,7 +44,7 @@ void loop() {
 }
  ```
 ## Output
- ![](
+ ![](https://github.com/anselllo/Kerala-IoT-Challenge/issues/5#issue-1088616028)
  
  
  
@@ -109,7 +109,7 @@ void loop()
 * Led *6nos
 * 220ohm resistor*6nos
 
-##Circuit Diagram
+## Circuit Diagram
 
 ## Code
 ```
