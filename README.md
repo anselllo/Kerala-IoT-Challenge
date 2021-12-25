@@ -22,10 +22,10 @@ Iintoduction to Arduino IDE and Its programming is intended here
 * 220 Ohm resistor *1
 * Usb A to B cable *1
  
- ## Circuit Diagram
+## Circuit Diagram
  ![](https://user-images.githubusercontent.com/95708160/147387609-b5e0f3f3-b38d-4238-9df4-a200e6406678.jpeg)
  
- ## Code
+## Code
  ```
  
  int ledPin=5;  //defining ledpin as pin 5
@@ -43,7 +43,8 @@ void loop() {
 
 }
  ```
- ## Output
+## Output
+ ![](
  
  
  
