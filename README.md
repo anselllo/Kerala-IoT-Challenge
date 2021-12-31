@@ -99,7 +99,7 @@ void loop()
 ```
 ## Output
 The green Led lights for five seconds followed by yellow LED blinking three times with a delay of 0.5seconds followed by the red LED ON for 5 seconds 
-![PLAY VEDIO](https://github.com/anselllo/Kerala-IoT-Challenge/issues/6#issue-1088616128)
+![](https://user-images.githubusercontent.com/95708160/147835010-9d50fff5-8f44-44a2-96e3-e504d8294237.gif)
 ## Observed Limitation  
 When all the six Leds turn on at a time the brightness of LEDs reduce owing to the higher power demand than the output.
 
@@ -150,7 +150,7 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  
  # Experiment 4 BUTTON CONTROLLED LED
  
- Taking feedback from a button to control any output pin
+ Taking feedback from a button to control any output pin,also to study setting of pins as input.
  ## Components Required 
  * Arduino Uno*1
  * Usbtype A to type B cable*1
@@ -162,6 +162,132 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  * Breadboard Jumper Wire*6
  
  ## Circuit Diagram
+ ![](https://user-images.githubusercontent.com/95708160/147835043-41ab71e6-49de-4430-9aa3-c20a88e0f40e.jpeg)
+ 
+ ## Code
+ ```
+ int ledpin=11;
+int button=7;
+int val;// define val
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set LED pin as output type
+pinMode(button,INPUT);// set button as input pin
+}
+void loop()
+{
+val=digitalRead(button);// read the level value of pin 7 and assign if to val
+if(val==LOW)// check if the button is pressed, if yes, turn on the LED
+  {
+  digitalWrite(ledpin,LOW);
+  }
+else
+  { 
+  digitalWrite(ledpin,HIGH);}
+  }
+  ```
+  ## OUTPUT 
+  The led blinks as the button is pressed.
+  ![](https://user-images.githubusercontent.com/95708160/147835211-cbac1881-55e0-43f8-83cb-5df7f88f2ae7.gif)
+  
+  
+ # EXPERIMENT 5 Buzzer
+ 
+ ## AIM
+ To control a buzzer and manipulate delay to make tunes
+ 
+ ## COMPONENTS REQUIRED
+ * Arduino Uno
+ * Buzzer*1
+ * Breadboard*1
+ * Breadboard Jumper Wire*2
+ * USB type A to type b*1
+  
+ ## CIRCUIT DIAGRAM
+ ![](https://user-images.githubusercontent.com/95708160/147835057-cecfa081-db21-4fb0-a296-7445a9cc94f5.jpeg)
+ 
+ ## **CODE**
+ ```
+int buzzer=8;
+void setup() 
+{ 
+  pinMode(buzzer,OUTPUT);
+} 
+void loop() 
+{
+digitalWrite(buzzer, HIGH);// produce tune
+delay(100);
+digitalWrite(buzzer, LOW);
+delay(100);
+
+}
+```
+
+
+## OUTPUT
+The buzzer buzzes with a delay of 100ms
+![](https://user-images.githubusercontent.com/95708160/147835183-a98a47b6-c13e-42b0-b464-de36c3074a94.gif)
+
+# EXPERIMENT 6 RGB LED
+
+## AIM
+To control the RGB LED to give diffrent pattern output
+
+## Note
+An RGB LED bulb uses three diodes in Red, Green and Blue. These are mixed in different intensities to produce a variety of different colours. The process is based on additive color mixing, the same technique which is used in TV sets, computer monitors and flat screens.
+
+analogWrite() takes two or three arguments:
+
+pin: the number of the pin whose value you wish to set
+value: the duty cycle: between 0 (always off) and 255 (always on). Since 0.6.0: between 0 and 255 (default 8-bit resolution) or 2^(analogWriteResolution(pin)) - 1 in general.
+frequency: the PWM frequency (optional). If not specified, the default is 500 Hz.
+
+
+## Components required
+* Arduino Uno *1
+* USB Cable type A to type B * 1
+* RGB LED * 1
+* Resistor 220ohm *1
+* jumper wire*5
+## Code
+```
+int redpin = 11; // red LED
+int bluepin =10; //  blue LED
+int greenpin =9;//  green LED
+int val;
+void setup() {
+  pinMode(redpin, OUTPUT);
+  pinMode(bluepin, OUTPUT);
+  pinMode(greenpin, OUTPUT);
+  Serial.begin(9600);
+}
+void loop() 
+{
+for(val=255; val>0; val--)
+  {
+   analogWrite(11, val);
+   analogWrite(10, 255-val);
+   analogWrite(9, 128-val);
+   delay(1); 
+  }
+for(val=0; val<255; val++)
+  {
+   analogWrite(11, val);
+   analogWrite(10, 255-val);
+   analogWrite(9, 128-val);
+   delay(1); 
+  }
+ Serial.println(val, DEC);
+}
+```
+## Circuit Diagram
+![](https://user-images.githubusercontent.com/95708160/147835078-a7bffb41-32f2-4910-8369-1106b5a2ac6b.jpeg)
+
+## OUTPUT
+The  RGB LED glows with aspecific pattern and brightness level
+![](https://user-images.githubusercontent.com/95708160/147835168-fe700260-dfc5-407d-a829-485e1f8a3c28.gif)
+
+  
  
 
 
