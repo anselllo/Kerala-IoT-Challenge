@@ -287,9 +287,459 @@ for(val=0; val<255; val++)
 The  RGB LED glows with aspecific pattern and brightness level
 ![](https://user-images.githubusercontent.com/95708160/147835168-fe700260-dfc5-407d-a829-485e1f8a3c28.gif)
 
-  
+# EXPERIMENT 7-LDR Light Sensor
+
+## LDR sensor
+LDR ( light dependent resistor ) also called photoresistors are responsive to light. Photoresistors are used to indicate the intensity or the presence or the absence of light. When there is darkness the resistance of photoresistor increases and when there is sufficient light it dramatically decreases.
+## COMPONENTS REQUIRED
+ *Arduino Uno 
+ *Photo Resistor
+ *Red M5 LED*
+ *10KΩ Resistor
+ *220Ω Resistor
+ *Breadboard
+ *Breadboard Jumper Wire
+ *USB cable
+## CIRCUIT DIAGRAM
+![](https://user-images.githubusercontent.com/95708160/151667212-71587939-2c72-4206-8c25-1c2cc3934596.jpeg)
+## CODE
+```
+int in=0;
+int ledpin=11; 
+int val=0;
+void setup()
+{
+pinMode(ledpin,OUTPUT);
+Serial.begin(9600);
+}
+void loop()
+{
+val=analogRead(in);
+Serial.println(val);
+analogWrite(ledpin,val/4);
+delay(10);
+}
+```
+## NOTE
+ *Ldr resistance will decrease as the incident light increases
+ *The analogread() varies from 0 to 1023 
+ *analogWrite() varies from 0 to 255 (1/4 th)
+## OUTPUT
+When the light falling on the Ldr the analog value is read and is fed to the led as duty cycle of range 255.and the Led attains brightness at the same rate the light in the room decreases.
+## OUTPUT VEDIO
+1[](https://user-images.githubusercontent.com/95708160/151668761-be8c85e8-96e1-44e5-9d22-ca6f18b436b7.gif)
+
+# EXP-8 Flame Sensor
+
+## WORKING
+When fire burns it emits a small amount of Infra-red light, this light will be received by the Photodiode (IR receiver) on the sensor module. Then we use an Op-Amp to check for a change in voltage across the IR Receiver, so that if a fire is detected the output pin (DO) will give 0V(LOW), and if the is no fire the output pin will be 5V(HIGH).
+## COMPONENTS REQUIRED
+  *Arduino Uno (any Arduino board can be used)
+  *Flame sensor module
+  *LED
+  *Buzzer
+  *Resistor
+  *Jumper wires
+## CODE
+```
+int buzzer = 13;
+int LED = 12;
+int flame_sensor = 4;
+int flame_detected;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(buzzer, OUTPUT);
+  pinMode(LED, OUTPUT);
+  pinMode(flame_sensor, INPUT);
+}
+
+void loop()
+{
+  flame_detected = digitalRead(flame_sensor);
+  if (flame_detected == 0)
+  {
+    Serial.println("Flame detected...! take action immediately.");
+    digitalWrite(buzzer, HIGH);
+    digitalWrite(LED, HIGH);
+    delay(200);
+    digitalWrite(LED, LOW);
+    delay(200);
+  }
+  else
+  {
+    Serial.println("No flame detected");
+    digitalWrite(buzzer, LOW);
+    digitalWrite(LED, LOW);
+  }
+  delay(1000);
+}
+```
+## CIRCUIT DIAGRAM
+![](https://user-images.githubusercontent.com/95708160/151667195-fdea2c1f-6b61-494c-b028-da896b285607.jpeg)
+
+## PRECAUTION
+* While using IR flame sensor module always keep in mind that logic'1' is for no flame and logic'0' is for flame detected 
+## OUTPUT VEDIO
+![](https://user-images.githubusercontent.com/95708160/151666688-86e20433-37cd-4385-8a9e-94dc86b59f8d.gif)
+
+## OUTPUT
+The flame sensor detects the presence of fire or flame based on the Infrared (IR) wavelength emitted by the flame and triggers the alarm in case of fire deteced
+
+# EXP-9  LM35 Temperature Sensor
+
+## LM35 SENSOR
+LM35 is an analog, linear temperature sensor whose output voltage varies linearly with change in temperature.It can measure temperature from-55 degree celsius to +150 degree celsius. The voltage output of the LM35 increases 10mV per degree Celsius rise in temperature. LM35 can be operated from a 5V supply.
+## COMPONENTS REQUIRED
+*Arduino Uno  Board*1
+*LM35*1
+*Breadboard*1
+*Breadboard Jumper Wire*5
+*USB cable*
+## CIRCUIT DIAGRAM
+![](https://user-images.githubusercontent.com/95708160/151667222-15649f1e-0864-4191-a1de-3364b758b92c.jpeg)
+## CODE
+```
+int potPin = 0; 
+void setup()
+{
+Serial.begin(9600);// set baud rate at”9600”
+}
+void loop()
+{
+int val;// define variable
+int dat;// define variable
+val=analogRead(0);
+dat=(125*val)>>8;
+Serial.print("Temp");
+Serial.print(dat);
+Serial.println("C");
+delay(500);
+}
+```
+## NOTE
+ LM35 is an analog temperature sensor. This means the output of LM35 is an analog signal. Microcontrollers dont accept analog signals as their input directly. We need to convert this analog output signal to digital before we can feed it to a microcontroller’s input. For this purpose, we can use an ADC( Analog to Digital Converter).Arduino uno has an in built 10 bit ADC (6 channel). We can make use of this in built ADC of arduino to convert the analog output of LM35 to digital output.
  
+## OUTPUT
+THE TEMP WILL BE DISPLAYED ON SERIAL MONITOR
+
+# EXP-10 IR Remote Control Using TSOP
+
+## IR 
+The signal from the infrared remote controller is a series of binary pulse code. To avoid the other infrared signal interference during the wireless transmission, the signal is pre-modulated at a specific carrier frequency and then send out by an infrared emission diode. The infrared receiving device needs to filter out other waves and receive signals at that specific frequency and to modulate it back to binary pulse code, known as demodulation.
+
+## WORKING
+IR remote controls, as the name would imply, make use of pulses of infrared light to send signals to a receiving device such as a television or sound system. Each button on the remote control sends out a unique pattern of pulses which are decoded by the receiver so that the appropriate action 
+
+## COMPONENTS REQUIRED
+*Arduino Uno Board*1
+*Infrared Remote Controller(You can use TV Remote or any other remote) *1
+*Infrared Receiver *1
+*LED *6
+*220ΩResistor *6
+*Breadboard Wire *11
+*USB cable*1
+## CIRCUIT DIAGRAM
+![](https://user-images.githubusercontent.com/95708160/151667203-5a943933-9b3b-4a36-82b2-32ad14d438d4.jpeg)
+## CODE
+```
+#include <IRremote.h>
+const int RECV_PIN = 4;
+const int redPin = 3; 
+const int yellowPin = 2;
+
+// Define integer to remember toggle state
+int togglestate1 = 0;
+int togglestate2 =0;
+
+// Define IR Receiver and Results Objects
+IRrecv irrecv(RECV_PIN);
+decode_results results;
 
 
+void setup(){
+  // Enable the IR Receiver
+  irrecv.enableIRIn();
+  // Set LED pins as Outputs
+  pinMode(redPin, OUTPUT);
+  pinMode(yellowPin, OUTPUT);
+}
 
 
+void loop(){
+    if (irrecv.decode(&results))
+    {
+
+        switch(results.value){
+          case 0x1FE48B7: //power buton of my remote
+        if(togglestate1==0)
+           {
+        digitalWrite(yellowPin, HIGH);
+        togglestate1=1;
+        }
+        else {
+        digitalWrite(yellowPin, LOW);
+        togglestate1=0;
+        };
+        break;
+   
+          case 0x1FE50AF: //digit one of my remote
+        // Toggle LED On or Off
+        if(togglestate2==0){
+        digitalWrite(yellowPin, HIGH);
+        togglestate2=1;
+        }
+        else {
+        digitalWrite(yellowPin, LOW);
+        togglestate2=0;
+        }
+        break;
+        
+    }
+    irrecv.resume(); 
+  }
+
+}
+```
+## OUTPUT
+The leds are toggled as the two buttons(power and 1)of the IR remote is pressed 
+## OUTPUT VEDIO
+![](https://user-images.githubusercontent.com/95708160/151666706-c6d8aa96-b46b-4b8a-b0cc-b6e682fc8978.gif)
+
+# EXP-11 POTENTIOMETER ANALOG VALUE READING
+
+## Potentiometer working principle 
+the potentiometer will act as a variable resistor. When you turn the knob, the resistor will increase or decrease, which will also increase or decrease the voltage on the analog pin to which the potentiometer is connected.Arduino Uno has a max voltage of 5V. The voltage on pin A0 will vary from 0V to 5V when you turn the knob.
+## Components required 
+* Arduino Uno 
+
+*10K Potentiometer
+
+*Breadboard
+
+*Breadboard Jumper Wire
+
+*USB cable
+## Circuit diagram
+![](https://user-images.githubusercontent.com/95708160/151667184-0d894c11-c32e-4a42-91bc-801e97efbf87.jpeg)
+## Code
+```
+  int pot=A0;
+  int led=9;
+  int val=0;
+void setup() {
+
+  pinMode(pot,INPUT);
+  pinMode(led,OUTPUT);
+  Serial.begin(9600);
+ 
+  
+}
+
+void loop()
+{
+  val=analogRead(pot);
+  Serial.println(val);
+  analogWrite(led,val/4);
+  
+
+}
+```
+## improvisation
+The data from the potentiometer is used to dim an Led by using analogWrite() function.
+
+## OUTPUT
+![](https://user-images.githubusercontent.com/95708160/151671652-3e4f1ee0-4aa3-4108-a8bf-9b4cd1ebf58c.png)
+## OUTPUT VEDIO
+![](https://user-images.githubusercontent.com/95708160/151666711-63f6a052-013c-4257-be37-12efb034a8bd.gif)
+
+# EXP-12 7 SEGMENT DISPLAY
+
+There are two types of seven-segment displays: common anode and common cathode. The Internal structure of each of these types is nearly the identical. However, the polarity of the LEDs and common terminal are different. In most standard cathode seven-segment displays (the one we used in the experiments), all seven LEDs, in addition to a dot LED, have the cathodes connected to pins 8 and pin 3. To use this display, we must connect GROUND to pin 3 and pin 8, then connect +5V to the other pins and make each of the individual segments light up
+## Working
+![](https://user-images.githubusercontent.com/95708160/151671959-ccb0767f-dd9d-40ab-b24f-9c0df678d45c.gif)
+## Circuit diagram
+![](https://user-images.githubusercontent.com/95708160/151667411-61ffe689-8c8e-456f-ad90-0bf2f3145e9c.jpeg)
+##Code
+```
+ int a=7;
+int b=6;
+int c=5
+int d=10;
+int e=11;
+int f=8;
+int g=9;
+int dp=4
+void digital_0(void) 
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,LOW);
+digitalWrite(dp,LOW);
+}
+void digital_1(void) // display number 1
+{
+unsigned char j;
+digitalWrite(c,HIGH);
+digitalWrite(b,HIGH);// turn on segment b
+for(j=7;j<=11;j++)// turn off other segments
+digitalWrite(j,LOW);
+digitalWrite(dp,LOW);// turn off segment dp
+}
+void digital_2(void) // display number 2
+{
+unsigned char j;
+digitalWrite(b,HIGH);
+digitalWrite(a,HIGH);
+for(j=9;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(c,LOW);
+digitalWrite(f,LOW);
+}
+void digital_3(void) // display number 3
+{digitalWrite(g,HIGH);
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(f,LOW);
+digitalWrite(e,LOW);
+}
+void digital_4(void) // display number 4
+{digitalWrite(c,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(a,LOW);
+digitalWrite(e,LOW);
+digitalWrite(d,LOW);
+}
+void digital_5(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b, LOW);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_6(void) // display number 6
+{
+unsigned char j;
+for(j=7;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(dp,LOW);
+digitalWrite(b,LOW);
+}
+void digital_7(void) // display number 7
+{
+unsigned char j;
+for(j=5;j<=7;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+for(j=8;j<=11;j++)
+digitalWrite(j,LOW);
+}
+void digital_8(void) // display number 8
+{
+unsigned char j;
+for(j=5;j<=11;j++)
+digitalWrite(j,HIGH);
+digitalWrite(dp,LOW);
+}
+void digital_9(void) // display number 5
+{
+unsigned char j;
+digitalWrite(a,HIGH);
+digitalWrite(b,HIGH);
+digitalWrite(c,HIGH);
+digitalWrite(d,HIGH);
+digitalWrite(e, LOW);
+digitalWrite(f,HIGH);
+digitalWrite(g,HIGH);
+digitalWrite(dp,LOW);
+}
+void setup()
+{
+int i;// set variable
+for(i=4;i<=11;i++)
+pinMode(i,OUTPUT);// set pin 4-11as “output”
+}
+void loop()
+{
+while(1)
+{
+digital_0();
+delay(1000);
+digital_1();
+delay(1000);
+digital_2();
+delay(1000); 
+digital_3();
+delay(1000);
+digital_4();
+delay(1000); 
+digital_5();
+delay(1000); 
+digital_6();
+delay(1000); 
+digital_7();
+delay(1000); 
+digital_8();
+delay(1000); 
+digital_9()
+delay(500); 
+}}
+```
+## OUTPUT
+The required numbers are printed on seven segemt display
+
+# ASSIGNMENT 1-Night lamp with LDR aand LED
+
+## Working
+when the lights fade out the LED should automatically fix the light 
+## COMPONENTS REQUIRED
+ *Arduino Uno 
+ *Photo Resistor
+ *Red M5 LED*
+ *10KΩ Resistor
+ *220Ω Resistor
+ *Breadboard
+ *Breadboard Jumper Wire
+ *USB cable
+## CIRCUIT DIAGRAM
+![](https://user-images.githubusercontent.com/95708160/151667212-71587939-2c72-4206-8c25-1c2cc3934596.jpeg)
+## CODE
+```
+int potpin=0;
+int ledpin=11; 
+int val=0;
+void setup()
+{
+pinMode(ledpin,OUTPUT);
+Serial.begin(9600);
+}
+void loop()
+{
+val=analogRead(potpin);
+Serial.println(val);
+analogWrite(ledpin,val/4);
+delay(10);
+}
+```
+## OUTPUT
+
+# ASSIGNMENT 2-Digital dice using button and seven segment display
