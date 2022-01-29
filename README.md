@@ -229,7 +229,7 @@ delay(100);
 
 ## OUTPUT
 The buzzer buzzes with a delay of 100ms
-## output vedio
+## OUTPUT VEDIO
 ![](https://user-images.githubusercontent.com/95708160/147835183-a98a47b6-c13e-42b0-b464-de36c3074a94.gif)
 
 # EXPERIMENT 6 RGB LED
