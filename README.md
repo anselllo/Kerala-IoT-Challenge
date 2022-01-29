@@ -99,6 +99,7 @@ void loop()
 ```
 ## Output
 The green Led lights for five seconds followed by yellow LED blinking three times with a delay of 0.5seconds followed by the red LED ON for 5 seconds 
+## Output vedio
 ![](https://user-images.githubusercontent.com/95708160/147835010-9d50fff5-8f44-44a2-96e3-e504d8294237.gif)
 ## Observed Limitation  
 When all the six Leds turn on at a time the brightness of LEDs reduce owing to the higher power demand than the output.
@@ -145,6 +146,7 @@ void loop()
 ```
 ##  OUTPUT
 The Leds will all lights up with a delay of 0.2 seconds and then turns of one by one with a delay of 0.2 second
+## Output vedio
  ![](https://user-images.githubusercontent.com/95708160/147388536-50e1d46d-23a3-4101-9b8d-a555aab5759c.gif)
  
  
@@ -188,6 +190,7 @@ else
   ```
   ## OUTPUT 
   The led blinks as the button is pressed.
+  ## output vedio
   ![](https://user-images.githubusercontent.com/95708160/147835211-cbac1881-55e0-43f8-83cb-5df7f88f2ae7.gif)
   
   
@@ -226,6 +229,7 @@ delay(100);
 
 ## OUTPUT
 The buzzer buzzes with a delay of 100ms
+## output vedio
 ![](https://user-images.githubusercontent.com/95708160/147835183-a98a47b6-c13e-42b0-b464-de36c3074a94.gif)
 
 # EXPERIMENT 6 RGB LED
@@ -285,6 +289,7 @@ for(val=0; val<255; val++)
 
 ## OUTPUT
 The  RGB LED glows with aspecific pattern and brightness level
+## OUTPUT VEDIO
 ![](https://user-images.githubusercontent.com/95708160/147835168-fe700260-dfc5-407d-a829-485e1f8a3c28.gif)
 
 # EXPERIMENT 7-LDR Light Sensor
@@ -327,7 +332,7 @@ delay(10);
 ## OUTPUT
 When the light falling on the Ldr the analog value is read and is fed to the led as duty cycle of range 255.and the Led attains brightness at the same rate the light in the room decreases.
 ## OUTPUT VEDIO
-1[](https://user-images.githubusercontent.com/95708160/151668761-be8c85e8-96e1-44e5-9d22-ca6f18b436b7.gif)
+![](https://user-images.githubusercontent.com/95708160/151668761-be8c85e8-96e1-44e5-9d22-ca6f18b436b7.gif)
 
 # EXP-8 Flame Sensor
 
