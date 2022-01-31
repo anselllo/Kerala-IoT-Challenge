@@ -918,8 +918,8 @@ void loop() {
 ## Output Video
 ![](https://github.com/anselllo/Kerala-IoT-Challenge/issues/34#issue-1118994663)
 ## New knowledge attained
- ### FUNCTION-randomSeed(analogRead(0));
- Computers are really bad at generating random numbers because they always follow the same set of instructions. You need to give them a random starting point, otherwise the instructions they follow would always produce the same result. That starting point is called the seed.
+FUNCTION-randomSeed(analogRead(0));
+Computers are really bad at generating random numbers because they always follow the same set of instructions. You need to give them a random starting point, otherwise the instructions they follow would always produce the same result. That starting point is called the seed.
 
 In this case the code reads the value of an unconnected analog input and uses that as the seed. That's pretty random because unconnected pins basically act like antennas and pick up environmental electromagnetic fields(An unconnected igital pin can show miute variations in signals )
 
