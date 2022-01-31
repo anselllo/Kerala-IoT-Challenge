@@ -592,6 +592,7 @@ There are two types of seven-segment displays: common anode and common cathode. 
 ![](https://user-images.githubusercontent.com/95708160/151671959-ccb0767f-dd9d-40ab-b24f-9c0df678d45c.gif)
 ## Circuit diagram
 ![](https://user-images.githubusercontent.com/95708160/151667411-61ffe689-8c8e-456f-ad90-0bf2f3145e9c.jpeg)
+
 ## Code
 
 ```
