@@ -779,6 +779,7 @@ delay(10);
 
 ```
 ## OUTPUT
+![](https://user-images.githubusercontent.com/95708160/151668761-be8c85e8-96e1-44e5-9d22-ca6f18b436b7.gif)
 
 # ASSIGNMENT 2-Digital dice using button and seven segment display
 ## Working
