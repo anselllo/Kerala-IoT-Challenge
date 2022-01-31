@@ -156,7 +156,7 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  
 #  Experiment 4 BUTTON CONTROLLED LED
  
- Taking feedback from a button to control any output pin,also to study setting of pins as input.
+Taking feedback from a button to control any output pin,also to study setting of pins as input.
  
 ##  Components Required 
  * Arduino Uno*1
@@ -170,7 +170,7 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  
 ##  Circuit Diagram
  
- ![](https://user-images.githubusercontent.com/95708160/147835043-41ab71e6-49de-4430-9aa3-c20a88e0f40e.jpeg)
+![](https://user-images.githubusercontent.com/95708160/147835043-41ab71e6-49de-4430-9aa3-c20a88e0f40e.jpeg)
  
 ##  Code
  ```
@@ -196,9 +196,9 @@ else
   ```
 ##  OUTPUT 
   
-  The led blinks as the button is pressed.
-  ## output vedio
-  ![](https://user-images.githubusercontent.com/95708160/147835211-cbac1881-55e0-43f8-83cb-5df7f88f2ae7.gif)
+The led blinks as the button is pressed.
+## output vedio
+![](https://user-images.githubusercontent.com/95708160/147835211-cbac1881-55e0-43f8-83cb-5df7f88f2ae7.gif)
   
 # EXPERIMENT 5 Buzzer
  
@@ -216,9 +216,9 @@ else
   
 ## CIRCUIT DIAGRAM
  
- ![](https://user-images.githubusercontent.com/95708160/147835057-cecfa081-db21-4fb0-a296-7445a9cc94f5.jpeg)
+![](https://user-images.githubusercontent.com/95708160/147835057-cecfa081-db21-4fb0-a296-7445a9cc94f5.jpeg)
  
-## **CODE**
+## CODE
  ```
 int buzzer=8;
 void setup() 
