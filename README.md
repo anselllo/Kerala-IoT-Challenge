@@ -519,7 +519,7 @@ void loop(){
   }
 
 }
-```
+``````
 ## OUTPUT
 The leds are toggled as the two buttons(power and 1)of the IR remote is pressed 
 ## OUTPUT VIDEO
