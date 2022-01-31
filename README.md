@@ -5,7 +5,7 @@
 > This page is maintained so as to keep the track of my experiments at different levels of the **Kerala IoT Challenge**.
 
 # About Me
-Hi,everyone I am Ansel Sebastian ,Currently pursuing B-tech from RIT Kottayam,My field of intrest are
+Hi,everyone I am Ansel Sebastian ,Currently pursuing B-tech from RIT Kotayam,My field of intrests are
 * Robotics
 * IoT
 * Automation
