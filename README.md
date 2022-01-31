@@ -408,12 +408,12 @@ The flame sensor detects the presence of fire or flame based on the Infrared (IR
 ## LM35 SENSOR
 LM35 is an analog, linear temperature sensor whose output voltage varies linearly with change in temperature.It can measure temperature from-55 degree celsius to +150 degree celsius. The voltage output of the LM35 increases 10mV per degree Celsius rise in temperature. LM35 can be operated from a 5V supply.
 ## COMPONENTS REQUIRED
-*Arduino Uno  Board*1
-*LM35*1
-*Breadboard*1
-*Breadboard Jumper Wire*5
-*USB cable*
-## CIRCUIT DIAGRAM
+ *Arduino Uno 
+ *LM35
+ *Breadboard
+ *Breadboard Jumper Wire
+ *USB cable
+ ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667222-15649f1e-0864-4191-a1de-3364b758b92c.jpeg)
 ## CODE
 ```
@@ -438,7 +438,7 @@ delay(500);
  LM35 is an analog temperature sensor. This means the output of LM35 is an analog signal. Microcontrollers dont accept analog signals as their input directly. We need to convert this analog output signal to digital before we can feed it to a microcontroller’s input. For this purpose, we can use an ADC( Analog to Digital Converter).Arduino uno has an in built 10 bit ADC (6 channel). We can make use of this in built ADC of arduino to convert the analog output of LM35 to digital output.
  
 ## OUTPUT
-THE TEMP WILL BE DISPLAYED ON SERIAL MONITOR
+The temperature is displayed on serial monitor
 
 # EXP-10 IR Remote Control Using TSOP
 
@@ -449,13 +449,13 @@ The signal from the infrared remote controller is a series of binary pulse code.
 IR remote controls, as the name would imply, make use of pulses of infrared light to send signals to a receiving device such as a television or sound system. Each button on the remote control sends out a unique pattern of pulses which are decoded by the receiver so that the appropriate action 
 
 ## COMPONENTS REQUIRED
-*Arduino Uno Board*1
-*Infrared Remote Controller(You can use TV Remote or any other remote) *1
-*Infrared Receiver *1
-*LED *6
-*220ΩResistor *6
-*Breadboard Wire *11
-*USB cable*1
+*Arduino Uno Board
+*Infrared Remote Controller
+*Infrared Receiver 
+*LED
+*220ΩResistor
+*Breadboard Wire
+*USB cable
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667203-5a943933-9b3b-4a36-82b2-32ad14d438d4.jpeg)
 ## CODE
@@ -573,6 +573,13 @@ The data from the potentiometer is used to dim an Led by using analogWrite() fun
 # EXP-12 7 SEGMENT DISPLAY
 
 There are two types of seven-segment displays: common anode and common cathode. The Internal structure of each of these types is nearly the identical. However, the polarity of the LEDs and common terminal are different. In most standard cathode seven-segment displays (the one we used in the experiments), all seven LEDs, in addition to a dot LED, have the cathodes connected to pins 8 and pin 3. To use this display, we must connect GROUND to pin 3 and pin 8, then connect +5V to the other pins and make each of the individual segments light up
+## Components required
+*Arduino Uno Board
+*1-digit LED Segment Display
+*220Ω Resistor
+*Breadboard
+*Breadboard Jumper Wires
+*USB cable
 ## Working
 ![](https://user-images.githubusercontent.com/95708160/151671959-ccb0767f-dd9d-40ab-b24f-9c0df678d45c.gif)
 ## Circuit diagram
@@ -727,6 +734,7 @@ The required numbers are printed on seven segemt display
 
 ## Working
 when the lights fade out the LED should automatically fix the light 
+
 ## COMPONENTS REQUIRED
  *Arduino Uno 
  *Photo Resistor
@@ -736,6 +744,7 @@ when the lights fade out the LED should automatically fix the light
  *Breadboard
  *Breadboard Jumper Wire
  *USB cable
+ 
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667212-71587939-2c72-4206-8c25-1c2cc3934596.jpeg)
 ## CODE
