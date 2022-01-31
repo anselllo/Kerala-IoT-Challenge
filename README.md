@@ -307,14 +307,14 @@ The  RGB LED glows with aspecific pattern and brightness level
 ## LDR sensor
 LDR ( light dependent resistor ) also called photoresistors are responsive to light. Photoresistors are used to indicate the intensity or the presence or the absence of light. When there is darkness the resistance of photoresistor increases and when there is sufficient light it dramatically decreases.
 ## COMPONENTS REQUIRED
- *Arduino Uno 
- *Photo Resistor
- *Red M5 LED*
- *10KΩ Resistor
- *220Ω Resistor
- *Breadboard
- *Breadboard Jumper Wire
- *USB cable
+ * Arduino Uno 
+ * Photo Resistor
+ * Red M5 LED*
+ * 10KΩ Resistor
+ * 220Ω Resistor
+ * Breadboard
+ * Breadboard Jumper Wire
+ * USB cable
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667212-71587939-2c72-4206-8c25-1c2cc3934596.jpeg)
 ## CODE
@@ -336,9 +336,9 @@ delay(10);
 }
 ```
 ## NOTE
- *Ldr resistance will decrease as the incident light increases
- *The analogread() varies from 0 to 1023 
- *analogWrite() varies from 0 to 255 (1/4 th)
+ * Ldr resistance will decrease as the incident light increases
+ * The analogread() varies from 0 to 1023 
+ * analogWrite() varies from 0 to 255 (1/4 th)
 ## OUTPUT
 When the light falling on the Ldr the analog value is read and is fed to the led as duty cycle of range 255.and the Led attains brightness at the same rate the light in the room decreases.
 ## OUTPUT VIDEO
@@ -349,12 +349,12 @@ When the light falling on the Ldr the analog value is read and is fed to the led
 ## WORKING
 When fire burns it emits a small amount of Infra-red light, this light will be received by the Photodiode (IR receiver) on the sensor module. Then we use an Op-Amp to check for a change in voltage across the IR Receiver, so that if a fire is detected the output pin (DO) will give 0V(LOW), and if the is no fire the output pin will be 5V(HIGH).
 ## COMPONENTS REQUIRED
-  *Arduino Uno (any Arduino board can be used)
-  *Flame sensor module
-  *LED
-  *Buzzer
-  *Resistor
-  *Jumper wires
+  * Arduino Uno (any Arduino board can be used)
+  * Flame sensor module
+  * LED
+  * Buzzer
+  * Resistor
+  * Jumper wires
 ## CODE
 ```
 int buzzer = 13;
@@ -407,12 +407,12 @@ The flame sensor detects the presence of fire or flame based on the Infrared (IR
 ## LM35 SENSOR
 LM35 is an analog, linear temperature sensor whose output voltage varies linearly with change in temperature.It can measure temperature from-55 degree celsius to +150 degree celsius. The voltage output of the LM35 increases 10mV per degree Celsius rise in temperature. LM35 can be operated from a 5V supply.
 ## COMPONENTS REQUIRED
- *Arduino Uno 
- *LM35
- *Breadboard
- *Breadboard Jumper Wire
- *USB cable
- ## CIRCUIT DIAGRAM
+ * Arduino Uno 
+ * LM35
+ * Breadboard
+ * Breadboard Jumper Wire
+ * USB cable
+## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667222-15649f1e-0864-4191-a1de-3364b758b92c.jpeg)
 ## CODE
 ```
@@ -448,13 +448,13 @@ The signal from the infrared remote controller is a series of binary pulse code.
 IR remote controls, as the name would imply, make use of pulses of infrared light to send signals to a receiving device such as a television or sound system. Each button on the remote control sends out a unique pattern of pulses which are decoded by the receiver so that the appropriate action 
 
 ## COMPONENTS REQUIRED
-*Arduino Uno Board
-*Infrared Remote Controller
-*Infrared Receiver 
-*LED
-*220ΩResistor
-*Breadboard Wire
-*USB cable
+* Arduino Uno Board
+* Infrared Remote Controller
+* Infrared Receiver 
+* LED
+* 220ΩResistor
+* Breadboard Wire
+* USB cable
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667203-5a943933-9b3b-4a36-82b2-32ad14d438d4.jpeg)
 ## CODE
@@ -573,12 +573,12 @@ The data from the potentiometer is used to dim an Led by using analogWrite() fun
 
 There are two types of seven-segment displays: common anode and common cathode. The Internal structure of each of these types is nearly the identical. However, the polarity of the LEDs and common terminal are different. In most standard cathode seven-segment displays (the one we used in the experiments), all seven LEDs, in addition to a dot LED, have the cathodes connected to pins 8 and pin 3. To use this display, we must connect GROUND to pin 3 and pin 8, then connect +5V to the other pins and make each of the individual segments light up
 ## Components required
-*Arduino Uno Board
-*1-digit LED Segment Display
-*220Ω Resistor
-*Breadboard
-*Breadboard Jumper Wires
-*USB cable
+* Arduino Uno Board
+* 1-digit LED Segment Display
+* 220Ω Resistor
+* Breadboard
+* Breadboard Jumper Wires
+* USB cable
 ## Working
 ![](https://user-images.githubusercontent.com/95708160/151671959-ccb0767f-dd9d-40ab-b24f-9c0df678d45c.gif)
 ## Circuit diagram
@@ -735,14 +735,14 @@ The required numbers are printed on seven segemt display
 when the lights fade out the LED should automatically fix the light 
 
 ## COMPONENTS REQUIRED
- *Arduino Uno 
- *Photo Resistor
- *Red M5 LED*
- *10KΩ Resistor
- *220Ω Resistor
- *Breadboard
- *Breadboard Jumper Wire
- *USB cable
+ * Arduino Uno 
+ * Photo Resistor
+ * Red M5 LED*
+ * 10KΩ Resistor
+ * 220Ω Resistor
+ * Breadboard
+ * Breadboard Jumper Wire
+ * USB cable
  
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667212-71587939-2c72-4206-8c25-1c2cc3934596.jpeg)
@@ -771,12 +771,12 @@ delay(10);
 Plastic and wooden dice are subject to wear and tear with time and might show biasing toward a specific number defying theory of randomness and the player as well. As this dice is completely electronic and programmed with zero bias this makes it an idle to rely on. It has a bright red light display and cheers sound when a player gets the highest number 6 of his best luck.
 
 ## Components Required
-*Arduino Uno
-*TM1637 7-Seven Segment Display
-*An active Buzzer
-*A button Switch
-*10K Ohm Resistor
-*Connecting Wires
+* Arduino Uno
+* TM1637 7-Seven Segment Display
+* An active Buzzer
+* button Switch
+* 10K Ohm Resistor
+* Connecting Wires
 
 ## Connection Setup
 ![](https://user-images.githubusercontent.com/95708160/151743715-e9e541b9-3728-418f-b7e2-aa572c178faf.jpeg)
