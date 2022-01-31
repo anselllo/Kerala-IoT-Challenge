@@ -45,6 +45,7 @@ void loop() {
  ```
 ## Output
 The LED blinks with a delay of one second 
+## Output Giff
  ![](https://user-images.githubusercontent.com/95708160/147388479-4a22307c-f547-4966-bcf2-cfc4f9be810f.gif)
  
  
@@ -99,7 +100,7 @@ void loop()
 ```
 ## Output
 The green Led lights for five seconds followed by yellow LED blinking three times with a delay of 0.5seconds followed by the red LED ON for 5 seconds 
-## Output vedio
+## Output video
 ![](https://user-images.githubusercontent.com/95708160/147835010-9d50fff5-8f44-44a2-96e3-e504d8294237.gif)
 ## Observed Limitation  
 When all the six Leds turn on at a time the brightness of LEDs reduce owing to the higher power demand than the output.
@@ -117,6 +118,7 @@ When all the six Leds turn on at a time the brightness of LEDs reduce owing to t
 * 220ohm resistor*6nos
 
 ## Circuit Diagram
+
 ![](https://user-images.githubusercontent.com/95708160/147388050-c91db1bd-febc-4b23-bbd1-5cbe55789a78.jpeg)
 
 ## Code
@@ -145,8 +147,10 @@ void loop()
 }
 ```
 ##  OUTPUT
+
 The Leds will all lights up with a delay of 0.2 seconds and then turns of one by one with a delay of 0.2 second
-## Output vedio
+## Output video
+
  ![](https://user-images.githubusercontent.com/95708160/147388536-50e1d46d-23a3-4101-9b8d-a555aab5759c.gif)
  
  
@@ -164,6 +168,7 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  * Breadboard Jumper Wire*6
  
  ## Circuit Diagram
+ 
  ![](https://user-images.githubusercontent.com/95708160/147835043-41ab71e6-49de-4430-9aa3-c20a88e0f40e.jpeg)
  
  ## Code
@@ -189,6 +194,7 @@ else
   }
   ```
   ## OUTPUT 
+  
   The led blinks as the button is pressed.
   ## output vedio
   ![](https://user-images.githubusercontent.com/95708160/147835211-cbac1881-55e0-43f8-83cb-5df7f88f2ae7.gif)
@@ -197,9 +203,11 @@ else
  # EXPERIMENT 5 Buzzer
  
  ## AIM
+ 
  To control a buzzer and manipulate delay to make tunes
  
  ## COMPONENTS REQUIRED
+ 
  * Arduino Uno
  * Buzzer*1
  * Breadboard*1
@@ -207,6 +215,7 @@ else
  * USB type A to type b*1
   
  ## CIRCUIT DIAGRAM
+ 
  ![](https://user-images.githubusercontent.com/95708160/147835057-cecfa081-db21-4fb0-a296-7445a9cc94f5.jpeg)
  
  ## **CODE**
@@ -228,6 +237,7 @@ delay(100);
 
 
 ## OUTPUT
+
 The buzzer buzzes with a delay of 100ms
 ## OUTPUT VEDIO
 ![](https://user-images.githubusercontent.com/95708160/147835183-a98a47b6-c13e-42b0-b464-de36c3074a94.gif)
@@ -235,13 +245,14 @@ The buzzer buzzes with a delay of 100ms
 # EXPERIMENT 6 RGB LED
 
 ## AIM
+
 To control the RGB LED to give diffrent pattern output
 
 ## Note
+
 An RGB LED bulb uses three diodes in Red, Green and Blue. These are mixed in different intensities to produce a variety of different colours. The process is based on additive color mixing, the same technique which is used in TV sets, computer monitors and flat screens.
 
 analogWrite() takes two or three arguments:
-
 pin: the number of the pin whose value you wish to set
 value: the duty cycle: between 0 (always off) and 255 (always on). Since 0.6.0: between 0 and 255 (default 8-bit resolution) or 2^(analogWriteResolution(pin)) - 1 in general.
 frequency: the PWM frequency (optional). If not specified, the default is 500 Hz.
@@ -289,7 +300,7 @@ for(val=0; val<255; val++)
 
 ## OUTPUT
 The  RGB LED glows with aspecific pattern and brightness level
-## OUTPUT VEDIO
+## OUTPUT VIDEO
 ![](https://user-images.githubusercontent.com/95708160/147835168-fe700260-dfc5-407d-a829-485e1f8a3c28.gif)
 
 # EXPERIMENT 7-LDR Light Sensor
@@ -331,7 +342,7 @@ delay(10);
  *analogWrite() varies from 0 to 255 (1/4 th)
 ## OUTPUT
 When the light falling on the Ldr the analog value is read and is fed to the led as duty cycle of range 255.and the Led attains brightness at the same rate the light in the room decreases.
-## OUTPUT VEDIO
+## OUTPUT VIDEO
 ![](https://user-images.githubusercontent.com/95708160/151668761-be8c85e8-96e1-44e5-9d22-ca6f18b436b7.gif)
 
 # EXP-8 Flame Sensor
@@ -386,7 +397,7 @@ void loop()
 
 ## PRECAUTION
 * While using IR flame sensor module always keep in mind that logic'1' is for no flame and logic'0' is for flame detected 
-## OUTPUT VEDIO
+## OUTPUT VIDEO
 ![](https://user-images.githubusercontent.com/95708160/151666688-86e20433-37cd-4385-8a9e-94dc86b59f8d.gif)
 
 ## OUTPUT
@@ -509,7 +520,7 @@ void loop(){
 ```
 ## OUTPUT
 The leds are toggled as the two buttons(power and 1)of the IR remote is pressed 
-## OUTPUT VEDIO
+## OUTPUT VIDEO
 ![](https://user-images.githubusercontent.com/95708160/151666706-c6d8aa96-b46b-4b8a-b0cc-b6e682fc8978.gif)
 
 # EXP-11 POTENTIOMETER ANALOG VALUE READING
@@ -712,7 +723,7 @@ delay(500);
 ## OUTPUT
 The required numbers are printed on seven segemt display
 
-# ASSIGNMENT 1-Night lamp with LDR aand LED
+# ASSIGNMENT 1-Night lamp with LDR and LED
 
 ## Working
 when the lights fade out the LED should automatically fix the light 
@@ -748,3 +759,159 @@ delay(10);
 ## OUTPUT
 
 # ASSIGNMENT 2-Digital dice using button and seven segment display
+## Working
+Plastic and wooden dice are subject to wear and tear with time and might show biasing toward a specific number defying theory of randomness and the player as well. As this dice is completely electronic and programmed with zero bias this makes it an idle to rely on. It has a bright red light display and cheers sound when a player gets the highest number 6 of his best luck.
+
+## Components Required
+*Arduino Uno
+*TM1637 7-Seven Segment Display
+*An active Buzzer
+*A button Switch
+*10K Ohm Resistor
+*Connecting Wires
+
+## Connection Setup
+![](https://user-images.githubusercontent.com/95708160/151743715-e9e541b9-3728-418f-b7e2-aa572c178faf.jpeg)
+
+## Library used
+ "Grove 4-Digit Display" by seed studio
+ 
+## Code
+```
+#include <TM1637.h>
+int CLK = 2;
+int DIO = 3;
+int DIC = 4;
+int BUZ = 5;
+
+int buttonState = 0;
+int randNum = 0;
+
+TM1637 tm(CLK, DIO);
+
+void setup() {
+  pinMode(DIC, INPUT);
+  pinMode(BUZ, OUTPUT);
+  Serial.begin(9600);
+
+  //define state of pins
+  digitalWrite(DIC, LOW);
+  
+
+  //initializes the pseudo-random number generator
+  randomSeed(analogRead(0));
+
+  //initialize TM1637 seven segment display
+  tm.init();
+
+  //set brightness; 0-7
+  tm.set(2);
+  tm.init();
+}
+
+
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  //read button
+  buttonState = digitalRead(DIC);
+
+  //decision taking
+  if (buttonState == HIGH)
+  {
+    randNum = random(1, 7);    
+    Serial.println(randNum);  
+
+    //switch case
+    // tm.display(position, character);
+    switch (randNum) {
+      case 1:
+        tm.display(0, 1);
+        tm.display(1, 1);
+        tm.point(1);
+        tm.display(2, 1);
+        tm.display(3, 1);
+        delay(5000);
+        randNum = 0;
+        break;
+      case 2:
+        tm.display(0, 2);
+        tm.display(1, 2);
+        tm.point(1);
+        tm.display(2, 2);
+        tm.display(3, 2);
+        delay(5000);
+        randNum = 0;
+        break;
+      case 3:
+        tm.display(0, 3);
+        tm.display(1, 3);
+        tm.point(1);
+        tm.display(2, 3);
+        tm.display(3, 3);
+        delay(5000);
+        randNum = 0;
+        break;
+      case 4:
+        tm.display(0, 4);
+        tm.display(1, 4);
+        tm.point(1);
+        tm.display(2, 4);
+        tm.display(3, 4);
+        delay(5000);
+        randNum = 0;
+        break;
+      case 5:
+        tm.display(0, 5);
+        tm.display(1, 5);
+        tm.point(1);
+        tm.display(2, 5);
+        tm.display(3, 5);
+        delay(5000);
+        randNum = 0;
+        break;
+      case 6:
+        tm.display(0, 6);
+        tm.display(1, 6);
+        tm.point(1);
+        tm.display(2, 6);
+        tm.display(3, 6);
+        digitalWrite(BUZ, HIGH);
+        delay(1000);
+        digitalWrite(BUZ, LOW);
+        randNum = 0;
+        break;
+    }
+    buttonState = 0;  
+    randNum = 0;     
+
+  }
+
+
+
+  else
+  {
+
+    tm.display(0, 0);
+    tm.display(1, 0);
+    tm.point(1);
+    tm.display(2, 0);
+    tm.display(3, 0);
+
+    buttonState = 0;
+    randNum = 0;
+  }
+
+}
+```
+## Output Giff
+![](https://user-images.githubusercontent.com/95708160/151743823-64b7375f-c310-4986-a49d-80497d79a3d4.gif)
+## Output Video
+![](https://github.com/anselllo/Kerala-IoT-Challenge/issues/34#issue-1118994663)
+## New knowledge attained
+ ### FUNCTION-randomSeed(analogRead(0));
+ Computers are really bad at generating random numbers because they always follow the same set of instructions. You need to give them a random starting point, otherwise the instructions they follow would always produce the same result. That starting point is called the seed.
+
+In this case the code reads the value of an unconnected analog input and uses that as the seed. That's pretty random because unconnected pins basically act like antennas and pick up environmental electromagnetic fields(An unconnected igital pin can show miute variations in signals )
+
