@@ -355,6 +355,7 @@ When fire burns it emits a small amount of Infra-red light, this light will be r
   * Buzzer
   * Resistor
   * Jumper wires
+    
 ## CODE
 ```
 int buzzer = 13;
@@ -391,11 +392,13 @@ void loop()
   delay(1000);
 }
 ```
+
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667195-fdea2c1f-6b61-494c-b028-da896b285607.jpeg)
 
 ## PRECAUTION
 * While using IR flame sensor module always keep in mind that logic'1' is for no flame and logic'0' is for flame detected 
+  
 ## OUTPUT VIDEO
 ![](https://user-images.githubusercontent.com/95708160/151666688-86e20433-37cd-4385-8a9e-94dc86b59f8d.gif)
 
