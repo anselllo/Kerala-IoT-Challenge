@@ -376,7 +376,7 @@ void loop()
   flame_detected = digitalRead(flame_sensor);
   if (flame_detected == 0)
   {
-    Serial.println("Flame detected...! take action immediately.");
+    Serial.println("Flame detected! take action immediately.");
     digitalWrite(buzzer, HIGH);
     digitalWrite(LED, HIGH);
     delay(200);
@@ -391,7 +391,7 @@ void loop()
   }
   delay(1000);
 }
-```
+``````
 
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667195-fdea2c1f-6b61-494c-b028-da896b285607.jpeg)
