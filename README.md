@@ -154,10 +154,11 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  ![](https://user-images.githubusercontent.com/95708160/147388536-50e1d46d-23a3-4101-9b8d-a555aab5759c.gif)
  
  
- # Experiment 4 BUTTON CONTROLLED LED
+#  Experiment 4 BUTTON CONTROLLED LED
  
  Taking feedback from a button to control any output pin,also to study setting of pins as input.
- ## Components Required 
+ 
+##  Components Required 
  * Arduino Uno*1
  * Usbtype A to type B cable*1
  * Button switch*1
@@ -167,11 +168,11 @@ The Leds will all lights up with a delay of 0.2 seconds and then turns of one by
  * Breadboard*1
  * Breadboard Jumper Wire*6
  
- ## Circuit Diagram
+##  Circuit Diagram
  
  ![](https://user-images.githubusercontent.com/95708160/147835043-41ab71e6-49de-4430-9aa3-c20a88e0f40e.jpeg)
  
- ## Code
+##  Code
  ```
  int ledpin=11;
 int button=7;
@@ -193,20 +194,19 @@ else
   digitalWrite(ledpin,HIGH);}
   }
   ```
-  ## OUTPUT 
+##  OUTPUT 
   
   The led blinks as the button is pressed.
   ## output vedio
   ![](https://user-images.githubusercontent.com/95708160/147835211-cbac1881-55e0-43f8-83cb-5df7f88f2ae7.gif)
   
-  
- # EXPERIMENT 5 Buzzer
+# EXPERIMENT 5 Buzzer
  
- ## AIM
+## AIM
  
  To control a buzzer and manipulate delay to make tunes
  
- ## COMPONENTS REQUIRED
+## COMPONENTS REQUIRED
  
  * Arduino Uno
  * Buzzer*1
@@ -214,11 +214,11 @@ else
  * Breadboard Jumper Wire*2
  * USB type A to type b*1
   
- ## CIRCUIT DIAGRAM
+## CIRCUIT DIAGRAM
  
  ![](https://user-images.githubusercontent.com/95708160/147835057-cecfa081-db21-4fb0-a296-7445a9cc94f5.jpeg)
  
- ## **CODE**
+## **CODE**
  ```
 int buzzer=8;
 void setup() 
@@ -234,7 +234,6 @@ delay(100);
 
 }
 ```
-
 
 ## OUTPUT
 
