@@ -391,7 +391,8 @@ void loop()
   }
   delay(1000);
 }
-``````
+
+```
 
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667195-fdea2c1f-6b61-494c-b028-da896b285607.jpeg)
@@ -418,6 +419,7 @@ LM35 is an analog, linear temperature sensor whose output voltage varies linearl
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667222-15649f1e-0864-4191-a1de-3364b758b92c.jpeg)
 ## CODE
+
 ```
 int potPin = 0; 
 void setup()
@@ -435,6 +437,7 @@ Serial.print(dat);
 Serial.println("C");
 delay(500);
 }
+
 ```
 ## NOTE
  LM35 is an analog temperature sensor. This means the output of LM35 is an analog signal. Microcontrollers dont accept analog signals as their input directly. We need to convert this analog output signal to digital before we can feed it to a microcontroller’s input. For this purpose, we can use an ADC( Analog to Digital Converter).Arduino uno has an in built 10 bit ADC (6 channel). We can make use of this in built ADC of arduino to convert the analog output of LM35 to digital output.
@@ -461,6 +464,7 @@ IR remote controls, as the name would imply, make use of pulses of infrared ligh
 ## CIRCUIT DIAGRAM
 ![](https://user-images.githubusercontent.com/95708160/151667203-5a943933-9b3b-4a36-82b2-32ad14d438d4.jpeg)
 ## CODE
+
 ```
 #include <IRremote.h>
 const int RECV_PIN = 4;
@@ -519,7 +523,8 @@ void loop(){
   }
 
 }
-``````
+
+```
 ## OUTPUT
 The leds are toggled as the two buttons(power and 1)of the IR remote is pressed 
 ## OUTPUT VIDEO
@@ -543,9 +548,9 @@ the potentiometer will act as a variable resistor. When you turn the knob, the r
 ![](https://user-images.githubusercontent.com/95708160/151667184-0d894c11-c32e-4a42-91bc-801e97efbf87.jpeg)
 ## Code
 ```
-  int pot=A0;
-  int led=9;
-  int val=0;
+int pot=A0;
+int led=9;
+int val=0;
 void setup() {
 
   pinMode(pot,INPUT);
@@ -563,6 +568,7 @@ void loop()
   
 
 }
+
 ```
 ## improvisation
 The data from the potentiometer is used to dim an Led by using analogWrite() function.
@@ -728,6 +734,7 @@ delay(1000);
 digital_9()
 delay(500); 
 }}
+
 ```
 ## OUTPUT
 The required numbers are printed on seven segemt display
@@ -766,6 +773,7 @@ Serial.println(val);
 analogWrite(ledpin,val/4);
 delay(10);
 }
+
 ```
 ## OUTPUT
 
@@ -915,6 +923,7 @@ void loop() {
   }
 
 }
+
 ```
 ## Output Giff
 ![](https://user-images.githubusercontent.com/95708160/151743823-64b7375f-c310-4986-a49d-80497d79a3d4.gif)
