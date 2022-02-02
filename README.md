@@ -740,7 +740,7 @@ delay(500);
 
 ```
 ## OUTPUT
-The required numbers are printed on seven segemt display
+![](https://user-images.githubusercontent.com/95708160/152190589-b23a24fe-9a7a-4275-ac79-c2042036624a.png)
 
 # ASSIGNMENT 1-Night lamp with LDR and LED
 
